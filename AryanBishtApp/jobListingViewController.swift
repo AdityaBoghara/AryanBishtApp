@@ -13,22 +13,22 @@ class jobListingViewController: UIViewController,UITableViewDelegate {
    
     @IBOutlet weak var tableView: UITableView!
     
+    var jobTitle:String?
   
-//    let job = [""]
-//
-//    let navyJob = ["AeroGrapher mate", "AirCrewMan", "Air Traffic Controller"]
-//
-//    let armyJob = ["Certified Nurse Midware","Urologist","Air and Missile Defence"]
+    let job = ["AeroGrapher mate", "AirCrewMan", "Air Traffic Controller"]
     
-    let job = ["In-flight refueling specialist","Flight engineer","Aircraft load master"]
+    let navyJob = ["AeroGrapher mate", "AirCrewMan", "Air Traffic Controller"]
+
+    let armyJob = ["Certified Nurse Midware","Urologist","Air and Missile Defence"]
     
-//    var job = navyJob
-//
+    let airforceJob = ["In-flight refueling specialist","Flight engineer","Aircraft load master"]
+    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        self.navigationItem.title = "JOB LISTING"
+        self.navigationItem.title = jobTitle
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -41,6 +41,7 @@ class jobListingViewController: UIViewController,UITableViewDelegate {
         if let destination = segue.destination as? ApplicationViewController {
             destination.jobtitle=job[(tableView.indexPathForSelectedRow?.row)!]
             }
+        tableView.deselectRow(at: tableView.indexPathForSelectedRow!, animated: true)
     }
     
 

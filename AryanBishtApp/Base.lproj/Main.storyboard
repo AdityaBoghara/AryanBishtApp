@@ -73,8 +73,8 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="US ARMY"/>
                                         <connections>
-                                            <action selector="armyButton:" destination="6vS-M8-DVK" eventType="touchUpInside" id="xix-x6-yiz"/>
-                                            <segue destination="fvD-MT-b4f" kind="show" id="UKc-AP-kzO"/>
+                                            <action selector="armyButton:" destination="6vS-M8-DVK" eventType="touchUpInside" id="cEa-8F-67h"/>
+                                            <segue destination="fvD-MT-b4f" kind="show" id="z1b-52-clb"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="guL-7V-SR6">
@@ -82,6 +82,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="US AIR FORCE"/>
                                         <connections>
+                                            <action selector="airForceButton:" destination="6vS-M8-DVK" eventType="touchUpInside" id="aXQ-0O-2GY"/>
                                             <segue destination="fvD-MT-b4f" kind="show" id="MJI-hr-G3x"/>
                                         </connections>
                                     </button>
@@ -90,6 +91,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="US NAVY"/>
                                         <connections>
+                                            <action selector="navyButton:" destination="6vS-M8-DVK" eventType="touchUpInside" id="7zg-K4-cDa"/>
                                             <segue destination="fvD-MT-b4f" kind="show" id="wQH-tl-5pB"/>
                                         </connections>
                                     </button>
@@ -146,6 +148,7 @@
                             <constraint firstItem="gzu-od-WGN" firstAttribute="bottom" secondItem="QRT-jq-2aF" secondAttribute="bottom" id="ldC-sa-UQ7"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="GoN-OR-fXO"/>
                     <connections>
                         <outlet property="tableView" destination="QRT-jq-2aF" id="eGz-vs-hoA"/>
                         <segue destination="P6G-tt-mk8" kind="show" identifier="applicationPageSegue" id="lvR-5j-BfT"/>
@@ -285,7 +288,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="UKc-AP-kzO"/>
+        <segue reference="wQH-tl-5pB"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="DHS2" width="239" height="210"/>
