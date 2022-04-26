@@ -10,16 +10,18 @@ import UIKit
 class ApplicationViewController: UIViewController {
 
     @IBOutlet weak var JobTitle: UILabel!
+    @IBOutlet weak var JobDescription: UILabel!
+    @IBOutlet weak var submitApplication: UIButton!
+    
+    
     var jobtitle:String?
+    var email:String?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
-        
         JobTitle.text = jobtitle
         
-        
-       
+      
     }
     
 

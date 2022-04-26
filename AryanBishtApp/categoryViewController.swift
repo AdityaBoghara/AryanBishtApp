@@ -35,12 +35,12 @@ class categoryViewController: UIViewController {
 
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let destination = segue.destination as? jobListingViewController {
-            destination.jobTitle=buttonTitle
-            }
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        if let destination = segue.destination as? jobListingViewController {
+//            destination.jobTitle=buttonTitle
+//            }
     
 
 
-}
+//}
 }

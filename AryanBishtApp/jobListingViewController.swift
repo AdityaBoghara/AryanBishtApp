@@ -10,28 +10,44 @@
 
 import UIKit
 
+//struct job{
+//
+//    var id:String
+//    var jobTitle:String
+//    var jobDescription: String
+//
+//}
+
+
+
 class jobListingViewController: UIViewController,UITableViewDelegate {
 
     
-   
+    @IBOutlet weak var jobListNavBar: UINavigationBar!
+    
     @IBOutlet weak var tableView: UITableView!
     
-    var jobTitle:String?
+   var jobTitle: String?
+    
+//    var jobList: [job] = [job]()
+    
+    
   
     let job = ["AeroGrapher mate", "AirCrewMan", "Air Traffic Controller"]
-    
-    let navyJob = ["AeroGrapher mate", "AirCrewMan", "Air Traffic Controller"]
-
-    let armyJob = ["Certified Nurse Midware","Urologist","Air and Missile Defence"]
-    
-    let airforceJob = ["In-flight refueling specialist","Flight engineer","Aircraft load master"]
+//
+//    let navyJob = ["AeroGrapher mate", "AirCrewMan", "Air Traffic Controller"]
+//
+//    let armyJob = ["Certified Nurse Midware","Urologist","Air and Missile Defence"]
+//
+//    let airforceJob = ["In-flight refueling specialist","Flight engineer","Aircraft load master"]
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
-        self.navigationItem.title = jobTitle
+        jobListNavBar.topItem?.title=jobTitle
+        
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -44,7 +60,7 @@ class jobListingViewController: UIViewController,UITableViewDelegate {
         if let destination = segue.destination as? ApplicationViewController {
             destination.jobtitle=job[(tableView.indexPathForSelectedRow?.row)!]
             }
-        tableView.deselectRow(at: tableView.indexPathForSelectedRow!, animated: true)
+//        tableView.deselectRow(at: tableView.indexPathForSelectedRow!, animated: true)
     }
     
 
